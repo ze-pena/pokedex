@@ -1,0 +1,18 @@
+@import '../../style/global/variables.scss';
+@import '../../style/global/flexbox.scss';
+
+.pk-box {
+  @extend %fb--collumn;
+  @extend %fb--center-center;
+  width: 100%;
+  border: $border;
+  border-radius: 5px;
+  margin-top: 30px;
+  padding: 15px 15px;
+
+  .pk-box__container {
+    @extend %fb--row-wrap;
+    @extend %fb--start-start;
+    width: 100%;
+  }
+}
