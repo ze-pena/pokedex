@@ -9,6 +9,7 @@
         :pokemon="pokemon"
       />
     </poke-box>
+    <poke-load v-else />
   </div>
 </template>
 
@@ -16,6 +17,7 @@
 import PokeSearch from '@/components/PokeSearch/PokeSearch.vue'
 import PokeBox from '@/components/PokeBox/PokeBox.vue'
 import PokeCard from '@/components/PokeCard/PokeCard.vue'
+import PokeLoad from '@/components/PokeLoad/PokeLoad.vue'
 
 export default {
   name: 'App',
@@ -29,6 +31,7 @@ export default {
     PokeSearch,
     PokeBox,
     PokeCard,
+    PokeLoad,
   },
   methods: {
     searchPokemon(search) {
