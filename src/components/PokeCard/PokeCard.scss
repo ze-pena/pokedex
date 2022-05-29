@@ -6,7 +6,6 @@
   @extend %fb--center-center;
   width: 25%;
   height: 225px;
-  border: $border;
 
   @media (max-width: 1120px) {
     width: 33.3%;
@@ -29,21 +28,25 @@
     border-radius: 4px;
     background-color: $box;
     overflow: hidden;
+    box-shadow: $box-shadow;
 
     .pk-content__img {
       @extend %fb--row;
       @extend %fb--center-center;
       width: 100%;
-      height: 70%;
-      border: 1px solid red;
+      height: 80%;
+
+      img {
+        width: 165px;
+        height: auto;
+      }
     }
 
     .pk-content__info {
       @extend %fb--row;
       @extend %fb--center-center;
       width: 100%;
-      height: 30%;
-      border: 1px solid blue;
+      height: 20%;
 
       .pk-info__name {
         @extend %fb--row;
@@ -53,7 +56,8 @@
         padding: 0 15px;
 
         span {
-          font-size: 1.15rem;
+          font-size: 1.2rem;
+          text-transform: capitalize;
         }
       }
 
@@ -65,7 +69,7 @@
         padding: 0 15px;
 
         span {
-          font-size: 0.85rem;
+          font-size: 0.95rem;
         }
       }
     }

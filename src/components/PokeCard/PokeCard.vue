@@ -2,14 +2,14 @@
   <li class="pk-card">
     <div class="pk-card__content">
       <picture class="pk-content__img">
-        <img src="" />
+        <img :src="pokemon.sprite" />
       </picture>
       <div class="pk-content__info">
         <div class="pk-info__name">
-          <span>Charizard</span>
+          <span>{{ pokemon.name }}</span>
         </div>
         <div class="pk-info__id">
-          <span>#0089</span>
+          <span>#{{ pokemon.id }}</span>
         </div>
       </div>
     </div>
@@ -19,6 +19,13 @@
 <script>
 export default {
   name: 'PokeCard',
+  props: {
+    pokemon: {
+      id: Number,
+      name: String,
+      sprite: String,
+    },
+  },
 }
 </script>
 

@@ -5,6 +5,7 @@
   @extend %fb--collumn;
   @extend %fb--center-center;
   width: 100%;
+  max-width: 1120px;
   padding: 0 25px;
 
   .pk-search__input {
