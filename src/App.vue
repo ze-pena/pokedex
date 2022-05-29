@@ -9,7 +9,7 @@
         :pokemon="pokemon"
       />
     </poke-box>
-    <poke-load v-else />
+    <poke-load v-if="!pokemons.length && !search" />
   </div>
 </template>
 
