@@ -1,47 +1,132 @@
-<script>
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
-</script>
+<main class="pokedex">
+  <div class="pokedex-header">
+    <div class="header-display">
+      <div class="display-sphere">
+        <div class="sphere-circle"></div>
+      </div>
 
-<main>
-  <div>
-    <a href="https://vite.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
-  <h1>Vite + Svelte</h1>
+      <div class="display-signal">
+        <div class="signal-circle"></div>
+        <div class="signal-circle"></div>
+        <div class="signal-circle"></div>
+      </div>
+    </div>
 
-  <div class="card">
-    <Counter />
+    <div class="header-content">
+      <input type="text" title="pesquisar" class="content-search" />
+    </div>
   </div>
 
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
+  <div class="pokedex-frame">
+    <div class="frame-content"></div>
+  </div>
 </main>
 
 <style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
+.pokedex {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: var(--plastic-color-1);
+}
+
+  .pokedex-header {
+    display: flex;
+    border-radius: 0 8px 0 0;
   }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+
+    .header-display {
+      display: flex;
+      gap: 16px;
+      border-radius: 0 0 64px 0;
+      padding: 8px 24px 16px 8px;
+      border-width: 0 6px 6px 0;
+      border-style: solid;
+      border-color: var(--plastic-color-2);
+      background-color: var(--plastic-color-1);
+    }
+
+      .display-sphere {
+        width: 50px;
+        height: 50px;
+        padding: 3px;
+        border-radius: 50%;
+        background-color: var(--neutral-color-2);
+      }
+
+        .sphere-circle {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background-color: var(--glass-color-1);
+          background: radial-gradient(circle, var(--neutral-color-1) 0%, var(--glass-color-1) 75%);
+        }
+
+      .display-signal {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+        .signal-circle {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          border: 1px solid var(--neutral-color-2);
+        }
+
+          .signal-circle:nth-child(1) {
+            background: radial-gradient(circle, var(--neutral-color-1) 0%, var(--status-color-1) 75%);
+          }
+
+          .signal-circle:nth-child(2) {
+            background: radial-gradient(circle, var(--neutral-color-1) 0%, var(--status-color-2) 75%);
+          }
+
+          .signal-circle:nth-child(3) {
+            background: radial-gradient(circle, var(--neutral-color-1) 0%, var(--status-color-3) 75%);
+          }
+
+    .header-content {
+      flex-grow: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 0 16px 8px 16px;
+      border-radius: 0 8px 0 0;
+      border-width: 6px 1px 0 0;
+      border-style: solid;
+      border-color: var(--plastic-color-2);
+    }
+
+      .content-search {
+        width: 100%;
+        max-width: 280px;
+        height: 45px;
+        padding: 8px 16px;
+        font-size: 1.45rem;
+        color: var(--screen-color-2);
+        outline: none;
+        border-radius: 4px;
+        border: 1px solid var(--plastic-color-2);
+        background-color: var(--screen-color-1);
+      }
+
+  .pokedex-frame {
+    flex-grow: 1;
+    display: flex;
+    padding: 16px;
+    border-radius: 0 0 8px 8px;
+    border-width: 0 1px 1px 6px;
+    border-style: solid;
+    border-color: var(--plastic-color-2);
   }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
-  .read-the-docs {
-    color: #888;
-  }
+
+    .frame-content {
+      flex-grow: 1;
+      border-radius: 8px;
+      border: 1px solid var(--plastic-color-2);
+      background-color: var(--neutral-color-2);
+    }
 </style>
