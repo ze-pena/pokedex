@@ -1,10 +1,10 @@
 <script>
-  const { pokemonList, header, body } = $props();
+  const { header, body } = $props();
 </script>
 
 <div class="pokedex-layout">
   {@render header()}
-  {@render body(pokemonList)}
+  {@render body()}
 </div>
 
 <style lang="postcss">

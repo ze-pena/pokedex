@@ -1,12 +1,10 @@
 <script>
   // Components
   import BodyContent from "../BodyContent/BodyContent.svelte";
-  // Props
-  const { pokemonList } = $props()
 </script>
 
 <div class="pokedex-body">
-  <BodyContent {pokemonList} />
+  <BodyContent/>
 </div>
 
 <style lang="postcss">

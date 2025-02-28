@@ -1,10 +1,10 @@
 <script>
-  // Shared States
-  import { pokemon } from "../../shared/pokedexState.svelte.js"
+  // Store
+  import { pokedex } from "../../store/pokedex.svelte.js";
 </script>
 
 <div class="header-search">
-  <input type="text" title="pesquisar" bind:value={pokemon.nameFilter}/>
+  <input type="text" title="pesquisar" bind:value={pokedex.nameFilter}/>
 </div>
 
 <style lang="postcss">

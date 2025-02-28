@@ -1,12 +1,13 @@
 <script>
   // Components
-  import PokemonCard from "../PokemonCard/PokemonCard.svelte"
-  const { pokemonList } = $props()
+  import PokemonCard from "../PokemonCard/PokemonCard.svelte";
+  //Store
+  import { pokedex } from "../../store/pokedex.svelte";
 </script>
 
 <div class="body-content">
   <ul>
-    {#each pokemonList as pokemon}
+    {#each pokedex.filteredPokemonList as pokemon}
       <PokemonCard {pokemon} />
     {/each}
   </ul>
