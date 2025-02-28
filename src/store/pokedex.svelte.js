@@ -16,4 +16,4 @@ class Pokedex {
   set pokemonList(value) { this.#pokemonList = [...value]; }
 }
 
-export const pokedex = new Pokedex();
+export const pokedexStore = new Pokedex();

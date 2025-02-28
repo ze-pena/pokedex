@@ -1,10 +1,10 @@
 <script>
   // Store
-  import { pokedex } from "../../store/pokedex.svelte.js";
+  import { pokedexStore } from "../../store/pokedex.svelte.js";
 </script>
 
 <div class="header-search">
-  <input type="text" title="pesquisar" bind:value={pokedex.nameFilter}/>
+  <input type="text" title="pesquisar" bind:value={pokedexStore.nameFilter}/>
 </div>
 
 <style lang="postcss">

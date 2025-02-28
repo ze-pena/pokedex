@@ -2,12 +2,12 @@
   // Components
   import PokemonCard from "../PokemonCard/PokemonCard.svelte";
   //Store
-  import { pokedex } from "../../store/pokedex.svelte";
+  import { pokedexStore } from "../../store/pokedex.svelte";
 </script>
 
 <div class="body-content">
   <ul>
-    {#each pokedex.filteredPokemonList as pokemon}
+    {#each pokedexStore.filteredPokemonList as pokemon}
       <PokemonCard {pokemon} />
     {/each}
   </ul>
