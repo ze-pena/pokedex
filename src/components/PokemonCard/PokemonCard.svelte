@@ -23,7 +23,7 @@
 <style lang="postcss">
 .pokemon-card {
   flex-grow: 1;
-  flex-basis: 200px;
+  flex-basis: 215px;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
