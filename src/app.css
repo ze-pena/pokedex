@@ -15,6 +15,32 @@
   --neutral-color-2: #dedede;
 
   --box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  --box-shadow-hover: rgba(0, 0, 0, 0.267) 0 2px 15px 2px;
+
+  --card-color-1: #ffffff;
+  --card-color-2: #f3f3f3;
+  --card-color-3: #f5f1e8;
+  --card-color-4: #949494;
+  --card-color-5: #242424;
+
+  --type-normal: #aaaa99;
+  --type-fire: #ff4422;
+  --type-water: #3399ff;
+  --type-electric: #ffcc33;
+  --type-grass: #77cc55;
+  --type-ice: #66ccff;
+  --type-fighting: #bb5544;
+  --type-poison: #aa5599;
+  --type-ground: #ddbb55;
+  --type-flying: #8899ff;
+  --type-psychic: #ff5599;
+  --type-bug: #aabb22;
+  --type-rock: #bbaa66;
+  --type-ghost: #6666bb;
+  --type-dragon: #7766ee;
+  --type-dark: #775544;
+  --type-steel: #aaaabb;
+  --type-fairy: #ee99ee;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
