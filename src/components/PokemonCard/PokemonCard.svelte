@@ -92,19 +92,29 @@
     box-shadow: var(--box-shadow-hover);
   }
 
-  @media screen and (min-width: 583px) {
+  @media screen and (min-width: 580px) {
     flex-basis: calc((100% - 24px) / 2);
     max-width: calc((100% - 24px) / 2);
   }
 
-  @media screen and (min-width: 832px) {
+  @media screen and (min-width: 830px) {
     flex-basis: calc((100% - 24px * 2) / 3);
     max-width: calc((100% - 24px * 2) / 3);
   }
 
-  @media screen and (min-width: 1081px) {
+  @media screen and (min-width: 1080px) {
     flex-basis: calc((100% - 24px * 3) / 4);
     max-width: calc((100% - 24px * 3) / 4);
+  }
+
+  @media screen and (min-width: 1366px) {
+    flex-basis: calc((100% - 24px * 4) / 5);
+    max-width: calc((100% - 24px * 4) / 5);
+  }
+
+  @media screen and (min-width: 1780px) {
+    flex-basis: calc((100% - 24px * 5) / 6);
+    max-width: calc((100% - 24px * 5) / 6);
   }
 
   .texture {
