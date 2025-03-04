@@ -16,6 +16,15 @@
     <input type="text" title="pesquisar" bind:value={pokedexStore.nameFilter}/>
   </div>
 
+  <div class="column generation">
+    <span>Gen. {pokedexStore.generation}</span>
+
+    <div class="actions">
+      <button type="button" class="gen-button last" onclick={clickLastGeneration}>last</button>
+      <button type="button" class="gen-button next" onclick={clickNextGeneration}>next</button>
+    </div>
+  </div>
+
   <div class="column filter">
     <fieldset>
       {#each pokedexStore.types as type}
@@ -25,15 +34,6 @@
         </div>
       {/each}
     </fieldset>
-  </div>
-
-  <div class="column generation">
-    <span>Gen. {pokedexStore.generation}</span>
-
-    <div class="actions">
-      <button type="button" class="gen-button last" onclick={clickLastGeneration}>last</button>
-      <button type="button" class="gen-button next" onclick={clickNextGeneration}>next</button>
-    </div>
   </div>
 </div>
 
@@ -45,7 +45,7 @@
   gap: 24px;
   padding: 16px 16px 0;
   border-radius: 0 8px 0 0;
-  border-width: 6px 1px 0 0;
+  border-width: 6px 1px 0 6px;
   border-style: solid;
   border-color: var(--plastic-color-2);
 
@@ -53,9 +53,10 @@
     display: flex;
 
     &.search {
-      flex-basis: 300px;
+      flex-basis: calc(250px + 145px);
       flex-grow: 1;
       align-items: center;
+      padding-left: 145px;
 
       input {
         width: 100%;
@@ -70,56 +71,10 @@
       }
     }
 
-    &.filter {
-      flex-grow: 2;
-      align-items: center;
-
-      fieldset {
-        flex-grow: 1;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2px;
-
-        .item {
-          flex-grow: 1;
-          flex-basis: 65px;
-          display: flex;
-          max-width: 65px;
-
-          input[type="checkbox"] {
-            appearance: none;
-          }
-
-          label {
-            cursor: pointer;
-            flex-grow: 1;
-            font-family: "Rubik", sans-serif;
-            font-size: 0.6rem;
-            font-weight: 600;
-            color: #ffffff;
-            text-align: center;
-            text-transform: uppercase;
-            padding: 8px 0;
-            border-radius: 4px;
-            border: 1px solid var(--card-color-5);
-            background-color: var(--glass-color-1);
-            filter: brightness(.65);
-            transition: filter 150ms ease-in-out;
-          }
-          
-          label:hover, 
-          input[type="checkbox"]:checked + label {
-            filter: brightness(1);
-          } 
-        }
-      }
-    }
-
     &.generation {
-      flex-grow: 1;
-      flex-direction: column;
+      flex-wrap: wrap;
       align-items: center;
-      gap: 8px;
+      gap: 16px;
 
       span {
         display: flex;
@@ -189,6 +144,62 @@
               border-left: 12px solid transparent;
             }
           }
+        }
+      }
+    }
+
+    &.filter {
+      flex-grow: 1;
+      align-items: center;
+
+      fieldset {
+        flex-grow: 1;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2px;
+
+        .item {
+          display: flex;
+          flex-basis: calc((100% - 2px * 2) / 3);
+          max-width: calc((100% - 2px * 2) / 3);
+
+          @media screen and (min-width: 435px) {
+            flex-basis: calc((100% - 2px * 5) / 6);
+            max-width: calc((100% - 2px * 5) / 6);
+          }
+
+          @media screen and (min-width: 545px) {
+            flex-basis: calc((100% - 2px * 8) / 9);
+            max-width: calc((100% - 2px * 8) / 9);
+          }
+
+          input[type="checkbox"] {
+            appearance: none;
+          }
+
+          label {
+            cursor: pointer;
+            flex-grow: 1;
+            font-family: "Rubik", sans-serif;
+            font-size: 0.6rem;
+            font-weight: 600;
+            color: #ffffff;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 8px 0;
+            border-radius: 4px;
+            border: 1px solid var(--card-color-5);
+            background-color: var(--glass-color-1);
+            filter: brightness(.65);
+            transition: filter 150ms ease-in-out;
+          }
+          
+          label:hover, 
+          input[type="checkbox"]:checked + label {
+            filter: brightness(1);
+          } 
         }
       }
     }

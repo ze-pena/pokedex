@@ -12,6 +12,7 @@
 
 <style lang="postcss">
 .header-output {
+  position: absolute;
   display: flex;
   gap: 16px;
   border-radius: 0 0 64px 0;

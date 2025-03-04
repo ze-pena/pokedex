@@ -9,7 +9,8 @@
 </header>
 
 <style lang="postcss">
-.pokedex-header {
+.pokedex-header { 
+  position: relative;
   display: flex;
   border-radius: 0 8px 0 0;
 }
