@@ -8,19 +8,20 @@
   // Serviços
   import pokedexService from "./services/pokedex"
   // Utilidades
-  import { sortById } from "./utils/sort";
-  import { extractPokemonIdFromURL } from "./utils/pokedex";
+  import { extractPokemonIdFromURL, sortPokemonListById } from "./utils/pokedex";
 
   const setPokemonList = async (generationId) => {
     try {
-      const { pokemon_species } = await pokedexService.getGenerations(generationId);
+      const { pokemon_species, types } = await pokedexService.getGenerations(generationId);
       const pokemonList = await Promise.all(pokemon_species.map(specie => {
         const id = extractPokemonIdFromURL(specie.url);
         return pokedexService.getPokemon(id);
       }));
-      pokedexStore.pokemonList = sortById(pokemonList);
+      pokedexStore.types = types.map(type => type.name);
+      pokedexStore.list = sortPokemonListById(pokemonList);
     } catch(error) {
-      pokedexStore.pokemonList = [];
+      pokedexStore.types = [];
+      pokedexStore.list = [];
       console.log(error);
     }
   };
