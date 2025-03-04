@@ -80,7 +80,6 @@
   cursor: pointer;
   position: relative;
   flex-grow: 1;
-  flex-basis: 230px;
   display: flex;
   padding: 16px 8px 8px;
   border-radius: 8px;
@@ -91,6 +90,21 @@
   &:hover {
     transition-duration: 150ms;
     box-shadow: var(--box-shadow-hover);
+  }
+
+  @media screen and (min-width: 583px) {
+    flex-basis: calc((100% - 24px) / 2);
+    max-width: calc((100% - 24px) / 2);
+  }
+
+  @media screen and (min-width: 832px) {
+    flex-basis: calc((100% - 24px * 2) / 3);
+    max-width: calc((100% - 24px * 2) / 3);
+  }
+
+  @media screen and (min-width: 1081px) {
+    flex-basis: calc((100% - 24px * 3) / 4);
+    max-width: calc((100% - 24px * 3) / 4);
   }
 
   .texture {

@@ -7,7 +7,7 @@
 
 <div class="body-content">
   <ul>
-    {#each pokedexStore.filteredPokemonList as pokemon}
+    {#each pokedexStore.filteredList as pokemon}
       <PokemonCard {pokemon} />
     {/each}
   </ul>
@@ -16,6 +16,7 @@
 <style lang="postcss">
 .body-content {
   flex-grow: 1;
+  display: flex;
   height: 100%;
   overflow: hidden;
   border-radius: 8px;
@@ -27,7 +28,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     padding: 32px 24px;
     gap: 32px 24px;
     height: 100%;
