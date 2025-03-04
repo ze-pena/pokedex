@@ -207,14 +207,4 @@ ul {
   width: 100dvw;
   height: 100dvh;
   overflow: hidden;
-  
-  /* background-color: var(--plastic-color-2);
-  background-image: url("./assets/pokeball_roll.gif");
-  background-size: 75px;
-  animation: moveIt 10s linear infinite; */
 }
-
-/* @keyframes moveIt {
-  from {background-position: top left;}
-  to {background-position: bottom right;}
-} */
