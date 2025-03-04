@@ -27,7 +27,7 @@
     gap: 8px;
 
     &.single {
-      align-items: center;
+      align-items: flex-start;
     }
 
     &.multiple {
