@@ -1,0 +1,212 @@
+:root {
+  --plastic-color-1: #dc0a2d;
+  --plastic-color-2: #990921;
+  --plastic-color-3: #272930;
+  --plastic-color-4: #4a4c52;
+
+  --glass-color-1: #27abfc;
+
+  --status-color-1: #fe002c;
+  --status-color-2: #fbe01b;
+  --status-color-3: #57a567;
+
+  --screen-color-1: #52ae5f;
+  --screen-color-2: #00312c;
+
+  --neutral-color-1: #ffffff;
+  --neutral-color-2: #dedede;
+
+  --box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  --box-shadow-hover: rgba(0, 0, 0, 0.267) 0 2px 15px 2px;
+
+  --card-color-1: #ffffff;
+  --card-color-2: #f3f3f3;
+  --card-color-3: #f5f1e8;
+  --card-color-4: #949494;
+  --card-color-5: #242424;
+
+  --type-normal: #aaaa99;
+  --type-fire: #ff4422;
+  --type-water: #3399ff;
+  --type-electric: #ffcc33;
+  --type-grass: #77cc55;
+  --type-ice: #66ccff;
+  --type-fighting: #bb5544;
+  --type-poison: #aa5599;
+  --type-ground: #ddbb55;
+  --type-flying: #8899ff;
+  --type-psychic: #ff5599;
+  --type-bug: #aabb22;
+  --type-rock: #bbaa66;
+  --type-ghost: #6666bb;
+  --type-dragon: #7766ee;
+  --type-dark: #775544;
+  --type-steel: #aaaabb;
+  --type-fairy: #ee99ee;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--dark-color-1);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  src: url(./assets/fonts/Oswald/Oswald-VariableFont_wght.ttf);
+	font-weight: 125 950;
+  font-stretch: 75% 125%;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  src: url(./assets/fonts/Rubik/Rubik-VariableFont_wght.ttf);
+	font-weight: 125 950;
+  font-stretch: 75% 125%;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+body {
+  font-size: 100%;
+  list-style-type: none;
+  line-height: 1;
+  width: clamp(100vw, 100%, 100svw);
+  height: clamp(100vh, 100%, 100svh);
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  width: 100dvw;
+  height: 100dvh;
+  overflow: hidden;
+}

@@ -1,10 +1,9 @@
-import Vue from 'vue'
-import App from './App.vue'
+import { mount } from 'svelte'
+import './app.css'
+import App from './App.svelte'
 
-import './plugins/axios'
+const app = mount(App, {
+  target: document.getElementById('app'),
+})
 
-Vue.config.productionTip = false
-
-new Vue({
-  render: (h) => h(App),
-}).$mount('#app')
+export default app
